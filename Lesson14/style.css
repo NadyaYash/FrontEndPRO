@@ -1,0 +1,14 @@
+.square{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+
+.new_div{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+
+}

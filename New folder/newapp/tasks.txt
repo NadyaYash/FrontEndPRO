@@ -1,0 +1,3 @@
+1. Создать компоненты Post и PostsContainer
+2. На основе массива posts создать карточки (Post) в PostsContainer (title и text)
+3. PostsContainer добавить в App

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit = {click}>
+        <input type="text" placeholder="Данные" name="title">
+        <input type="text" placeholder="Значения" name="data">
+        <button>Кнопка</button>
+    </form>
+
+    click((event) => {
+        event.preventDefault();
+        const {title, data} = event.target;
+        console.log(tetle.value, data.value)
+        
+    }) 
+
+</body>
+</html>

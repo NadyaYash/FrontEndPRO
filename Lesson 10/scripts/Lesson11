@@ -1,0 +1,62 @@
+const users = [
+  {
+    id: 1,
+    first_name: 'Igor',
+    last_name: 'Ushanov',
+    age: 27,
+    city: 'Berlin',
+    country: 'Germany',
+    salary: 1500
+  }, 
+  {
+    id: 2,
+    first_name: 'Irina',
+    last_name: 'Petrova',
+    age: 17,
+    city: 'Madrid',
+    country: 'Spain',
+    salary: 1000
+  }, 
+  {
+    id: 3,
+    first_name: 'Olga',
+    last_name: 'Ivanova',
+    age: 63,
+    city: 'Paris',
+    country: 'France',
+    salary: 2000
+  },
+  {
+    id: 4,
+    first_name: 'Petr',
+    last_name: 'Shepelin',
+    age: 41,
+    city: 'Bremen',
+    country: 'Germany',
+    salary: 750
+  },
+];
+
+// const users_new = users.filter(el => el.salary >= 1500);
+// console.log(users_new);
+
+// 2. Сформируйте новый массив, в которых войдет информация о совершеннолетних пользователях в следующем формате: '<Имя> <Фамилия> (<возраст>): <зарплата>'
+
+const users_new1 = users.filter(el => el.age >= 18).map(({first_name, last_name, age, salary}) => `${first_name} ${last_name}(${age}) : ${salary}`);
+// console.log(users_new1);
+
+const product = {
+    id: 3,
+    title: 'Orange',
+    price: 150
+}
+
+// const {id, title, price} = product;
+
+// console.log(id);
+// console.log(title);
+// console.log(price);
+
+const users_new3 = users.map(({first_name, last_name}) => `${first_name} ${last_name}`);
+console.log(users_new3)
+

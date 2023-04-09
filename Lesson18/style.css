@@ -1,0 +1,6 @@
+.mini_container{
+    border: 2px solid black;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+}

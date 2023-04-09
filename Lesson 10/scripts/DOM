@@ -1,0 +1,24 @@
+const new_elem = document.querySelector('.root');
+// const new_f = document.createElement('p');
+// new_f.innerHTML = 'Hi';
+// new_elem.append(new_f);
+
+const product = {
+    title: 'Kiwi',
+    price: 400,
+    discount: 0.15
+  }
+
+  const card_elem = document.createElement('div');
+  const new_p = document.createElement('p');
+  const new_p2 = document.createElement('p');
+  const new_price_elem = document.createElement('p');
+  card_elem.append(new_p, new_p2, new_price_elem);
+  new_elem.append(card_elem);
+  const {title, price, discount} = product;
+  new_p.innerText = `Title: ${title}`;
+  new_p2.innerText = `Price: ${price}`;
+  new_price_elem.innerText = `New price: ${price - price*discount}`;
+  
+  
+  

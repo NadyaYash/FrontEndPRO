@@ -1,0 +1,9 @@
+.card_styles{
+    border: 3px solid rgb(41, 128, 185);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+}

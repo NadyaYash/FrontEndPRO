@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    font-size: 40px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  
+[class^="box-"] {
+    background-color: skyblue;
+    /* Размещаем контейнеры по центру */
+    /* display: grid;
+    place-items: center;
+  } */}
+
+  .container {
+    display: grid;
+    gap: 20px;
+  }
+
+  .container {
+    display: grid;
+    gap: 50px;
+    height: 100vh;
+  
+    /* Каждый контейнер имеет размер 200px на 200px */
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+  
+    /* ! */
+    justify-items : end;
+  }
