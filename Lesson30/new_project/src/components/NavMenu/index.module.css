@@ -1,0 +1,15 @@
+.header{
+    background-color: rgb(3, 3, 93);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+
+    
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+  }

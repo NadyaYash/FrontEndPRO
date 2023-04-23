@@ -20,7 +20,7 @@ export default function Card({id, rus, eng, lang, change_lang, delete_card}) {
      style= {back}
 
      onClick={() => change_lang(id)}
-     onDoubleClick = {() => delete_post(id)}  >
+     onDoubleClick = {() => delete_card(id)}  >
         
           {lang_l}
         
