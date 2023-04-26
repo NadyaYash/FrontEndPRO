@@ -1,0 +1,26 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    margin: 8px 0px;
+  
+    width: 100%;
+    border-radius: 55px;
+  
+    color: #1A1A1A;  
+    font-weight: 700;
+    font-size: 16px;
+  
+    cursor: pointer;
+  }
+
+  .yellow {
+    background-color: #FFE44D;
+    border: 1px solid #FFE44D;
+  }
+  
+  .white {
+    background-color: white;
+    border: 1px solid #ECEFF1;
+  }
