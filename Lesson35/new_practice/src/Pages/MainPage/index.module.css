@@ -1,0 +1,14 @@
+.menu_items {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .menu_items a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 40px;
+    background-color: green;
+    color: white;
+    font-size: 25px;
+  }

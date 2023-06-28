@@ -1,0 +1,23 @@
+.cart_item {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cart_item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.cart_item button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cart_item span {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}

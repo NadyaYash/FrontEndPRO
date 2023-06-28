@@ -4,13 +4,23 @@ import Configurations from './pages/Configurations';
 import {Routes, Route} from 'react-router-dom'
 import Teams from './pages/Teams';
 import Main from './pages/Main';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Context} from './context'
 
 
 function App() {
+ 
+
+  
 
 const [teams, setTeams] = useState([]);
+
+useEffect(()=>{
+  setTeams(JSON.parse(localStorage.getItem('teams'))|| [])}, []) ;
+
+useEffect( ()=> {
+  localStorage.setItem('teams', JSON.stringify(teams))}, [teams]);
+
 const addTeam = value=>{
   setTeams([...teams, {
     value,

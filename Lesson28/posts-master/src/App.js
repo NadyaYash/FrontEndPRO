@@ -1,11 +1,20 @@
 import PostsContainer from './Components/PostsContainer';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { posts_data } from './data/posts';
 import AddCardsForm from './Components/AddPostsForm';
 import {Context} from './context'
 
 function App() {
   let [posts, setPosts] = useState(posts_data);
+
+ 
+  useEffect(() => {
+    setPosts(JSON.parse(localStorage.getItem('posts')))
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('posts', JSON.stringify(posts))
+  }, [posts]);
 
 
   const change_like = id => {

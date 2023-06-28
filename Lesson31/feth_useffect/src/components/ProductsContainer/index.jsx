@@ -9,6 +9,15 @@ export default function ProductsContainer() {
 
     console.log(products);
 
+    useEffect(()=>{
+      setProducts(JSON.parse(localStorage.getItem('products')) || products)
+    }, []);
+  
+    useEffect(()=> {
+      localStorage.setItem('products', JSON.stringify(products))
+    }, [products]);
+  
+
     
   return (
     <div>

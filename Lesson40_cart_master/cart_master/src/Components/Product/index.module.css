@@ -1,0 +1,38 @@
+.product_item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.product_item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.product_item p {
+  text-align: center;
+}
+
+.add_btn {
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.product_item:hover .add_btn {
+  visibility: visible;
+}
+
+.product_item a {
+  text-decoration: none;
+  color: black;
+}
+
+.product_item div {
+  padding: 20px;
+}

@@ -4,9 +4,9 @@ import s from './index.module.css'
 
 export default function NavMenu() {
   return (
-    <div className= {s.header}>
+    <div>
         
-        <Link to= '/configurations'><div>Configurations</div></Link>
+        <Link to= '/configurations'><div cl>Configurations</div></Link>
         <Link to= '/teams'><div>Teams</div></Link>
        
     </div>

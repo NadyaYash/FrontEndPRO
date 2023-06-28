@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import s from './index.module.css'
+import { Context } from '../../context';
 
 
 
-export default function Triggers({change_to_eng, change_to_rus}) {
+export default function Triggers() {
+
+  const {change_to_rus, change_to_eng} = useContext(Context);
     
   return (
     <div className={s.triggers}>

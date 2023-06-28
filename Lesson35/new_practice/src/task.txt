@@ -1,0 +1,36 @@
+1. Установить библиотеку react-router-dom
+2. Создать три страницы - MainPage, UsersPage, ProductsPage
+3. Настроить между ними роутинг - на MainPage есть две карточки Users и Products, при клике на которые пользователь переходит на соответствующие страницы. На каждой из страниц UsersPage и ProductsPage есть кнопка перехода на главную страницу
+4. Стилизовать компоненты
+5. Создать CategoriesContainer и Category
+6. Импортировать CategoriesContainer в ProductsPage
+7. Написать функцию, которая отправляет fetch get-запрос по ссылке https://api.escuelajs.co/api/v1/categories и выводит полученные данные в консоль. Вызвать функцию в CategoriesContainer
+8. Создать состояние categories (+setCategories)
+9. Полученные по запросу данные поместить в состояние categories
+10. Из состояния categories создать карточки категорий (image, name)
+11. Стилизовать категории
+12. Создать ProductsByCategoryPage, добавить в роутинг
+13. При клике на карточку категории пользователь переходил на соответствующий роут - /products/:category
+14. Написать функцию getProductsByCategory(), которая будет отправлять запрос по ссылке https://api.escuelajs.co/api/v1/categories/{id}/products и выводить полученные данные в консоль
+15. Создать ProductsContainer и ProductItem
+16. Импортировать ProductsContainer в ProductsByCategoryPage
+17. В ProductsByCategoryPage вызвать функцию getProductsByCategory()
+18. Создать в ProductsContainer состояние products (+setProducts), поместить в состояние полученыые по запросу данные
+19. Из состояния products отрисовать карточки товаров (image, title, description, price)
+20. Стилизовать карточки продуктов
+
+ДЗ
+21. Создать ProductDescriptionPage (страница с подробным описанием одного продукта), подключить ее к роутингу
+22. Написать функцию, отправляющую fetch-запрос по ссылке https://api.escuelajs.co/api/v1/products/{id}
+23. При клике на карточку товара открывается страница с подробным описанием этого товара (image, title, description, price)
+24. Написать функцию, которая отправляет запрос по ссылке https://api.escuelajs.co/api/v1/users, получает ответ и записывает его в состояние users(+setUsers)
+25. Создать UsersCardsPage, UsersContainer и UserItem
+26. Подключить UsersCardsPage к роутингу - /admins и /customers
+27. UsersContainer импортировать в UsersCardsPage
+28. При клике на карточку должно перебрасывать на соответствующий роут - /users/admin и /users/customer
+29. В UsersContainer отрисовывались только те карточки, которые соответсвуют роуту
+30. Создать UserDescriptionPage и подключить к роутингу
+31. Написать функцию getUser, которая отправляет запрос по ссылке https://api.escuelajs.co/api/v1/users/{id} и выводит в консоль полученные данные
+32. Вызвать функцию getUser на странице UserDescriptionPage, передав в нее айди продукта
+ДЗ
+33. Из полученного объекта отрисовать интерфейс UserDescriptionPage

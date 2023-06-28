@@ -1,0 +1,15 @@
+.user_item {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .user_item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }

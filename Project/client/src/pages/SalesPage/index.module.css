@@ -1,0 +1,20 @@
+.salesPage {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.salesPage h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 49px;
+}
+
+.formsBlock {
+    display: flex;
+    gap: 69px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 81px;
+}

@@ -1,0 +1,25 @@
+.formStyle{
+    margin-bottom: 15px;
+}
+
+.formStyle button {
+    background-color:green;
+    border-radius: 10px;
+    border: 1px solid green;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.formStyle input{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    width: 300px;
+}

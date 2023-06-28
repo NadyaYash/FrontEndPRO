@@ -1,0 +1,4 @@
+1. Создать компоненты CategoriesPage, ProductsPage, ProductDescriptionPage
+2. Поместить в роутинг страницаму CategoriesPage как главную
+3. Создать состояние categories (+ setCategories), отправить fetch запрос по ссылке https://api.escuelajs.co/api/v1/categories, полученный ответ записать в состояние categories
+4. Создать компоненты CategoriesContainer и Category => Отрисовать карточки категорий на странице CategoriesPage (название + фото)

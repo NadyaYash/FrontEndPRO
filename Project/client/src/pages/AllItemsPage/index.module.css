@@ -1,0 +1,20 @@
+.allItems {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.allItems h1 {
+    padding-top: 49px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.formsBlock {
+    display: flex;
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 81px;
+}

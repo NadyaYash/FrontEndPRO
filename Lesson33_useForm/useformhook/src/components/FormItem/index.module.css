@@ -13,3 +13,9 @@
     font-weight: 400;
     color: #7B8E98;
   }
+
+  .messageError{
+  font-size: 28px;
+  color: red;
+  text-align: end;
+  }

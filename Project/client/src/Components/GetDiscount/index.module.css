@@ -1,0 +1,83 @@
+.getDiscount {
+    width: 1440px;
+    height: 476px;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 91px;
+    gap: 199px;
+    margin-bottom: 49px;
+
+
+}
+
+#discountTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    color: #FFFFFF;
+}
+
+#discount {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    color: #FFFFFF;
+    padding-bottom: 46px;
+}
+
+#discountBtn {
+    width: 473px;
+    height: 75.44px;
+    border: 2.39494px solid #FFFFFF;
+    border-radius: 25.1468px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28.7392px;
+    line-height: 120%;
+    color: #FFFFFF;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+   
+}
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30.52px;
+    padding-right: 255px;
+
+
+}
+
+.form input {
+    width: 473px;
+    height: 75.44px;
+    background: #FFFFFF;
+    border-radius: 25.1468px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: #6C6C6C;
+    padding-left: 50px;
+    
+}
+
+.messageError{
+    color: #6C6C6C;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+
+}

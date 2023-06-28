@@ -1,14 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './App.css';
 import CardsContainer from './components/CardsContainer'
 import Triggers from './components/Triggers'
 import { words } from '../src/data/words'
 import Add_card_form from './components/Add_card_form';
+import {Context} from './context'
+
 
 
 function App() {
 
   const [ cards, setCards ] = useState(words);
+
+  useEffect(()=>{
+    setCards(JSON.parse(localStorage.getItem('cards')) || cards)
+  }, []);
+
+  useEffect(()=> {
+    localStorage.setItem('cards', JSON.stringify(cards))
+  }, [cards]);
 
   const change_to_eng = () => {
     setCards(cards.map(el => {
@@ -40,9 +50,11 @@ function App() {
 
   return (
     <div>
-      <Add_card_form add_card={add_card}/>
-      <CardsContainer cards={cards} change_lang = {change_lang} delete_card={delete_card} />
-      <Triggers  change_to_eng={change_to_eng} change_to_rus={change_to_rus}/>
+      <Context.Provider value={{add_card, cards, change_lang, delete_card, change_to_eng, change_to_rus}}>
+      <Add_card_form />
+      <CardsContainer />
+      <Triggers  />
+      </Context.Provider>
       
       
     </div>

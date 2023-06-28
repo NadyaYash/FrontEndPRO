@@ -8,6 +8,15 @@ export default function UsersContainer() {
     const [users, setUsers] = useState([])
     useEffect(() => {get_users(setUsers);}, []);
 
+    useEffect(()=>{
+      setUsers(JSON.parse(localStorage.getItem('users')) || users)
+    }, []);
+  
+    useEffect(()=> {
+      localStorage.setItem('users', JSON.stringify(users))
+    }, [users]);
+  
+
     console.log(users);
     
   return (

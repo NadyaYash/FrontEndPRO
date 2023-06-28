@@ -19,7 +19,7 @@ export default function Post({comments, id, title, text, like}) {
         <p>{text}</p>
         <p className={s.par} onClick={() => delete_post(id)}>X</p>
         <button onClick={()=>change_like(id)} style={likely_style}>{likely}</button>
-        <CommentsContainer comments = {comments} post_id = {id} />
+        <CommentsContainer comments = {comments} post_id = {id}  />
     </div>
   )
 }
