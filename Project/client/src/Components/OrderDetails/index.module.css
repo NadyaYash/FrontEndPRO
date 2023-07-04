@@ -77,6 +77,10 @@
 
 }
 
+.formBlock input:focus {
+    outline: none;
+}
+
 .formBlock button {
     background: #339933;
     border-radius: 17px;
@@ -88,10 +92,22 @@
     font-size: 28px;
     color: #FFFFFF;
     border: 0px solid #339933;
+    cursor: pointer;
+    box-shadow: none;
+
 }
 
-#messageError{
+.formBlock button:hover,
+.formBlock button:focus {
+    background-color: #01b024;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+
+
+#messageError {
     font-size: 20px;
     color: red;
     text-align: end;
-    }
+}

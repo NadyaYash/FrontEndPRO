@@ -11,14 +11,11 @@ export const getCategories = dispatch => {
 export const getSingleCategory = id => {
     return dispatch => {
         fetch(`http://localhost:3333/categories/${id}`)
-        .then(res => res.json())
-        .then(json => dispatch(loadSingleCategoryAction(json)))
+            .then(res => res.json())
+            .then(json => {
+                const new_json = json.data.map(el => ({ ...el, hide_price: false, hide_sale: true }))
+                dispatch(loadSingleCategoryAction(new_json))})
     }
 
 }
-
-
-
-
-
 

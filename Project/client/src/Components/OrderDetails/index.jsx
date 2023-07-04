@@ -2,6 +2,7 @@ import React from 'react'
 import s from './index.module.css'
 import { useSelector } from 'react-redux'
 import { useForm } from 'react-hook-form'
+import { sendOrderRequest } from '../../async_actions/post_order_req'
 
 
 export default function OrderDetails({fullPrice}) {
@@ -12,8 +13,17 @@ export default function OrderDetails({fullPrice}) {
   });
 
   const submit = (data) => {
-    console.log(data);
-    reset()
+    const requestData = {
+      id: Date.now(),
+      phoneNumber: data.phone
+    };
+
+    sendOrderRequest(requestData)
+      .then(() => {
+        reset();
+      });
+
+    reset();
   };
 
   const phoneRegexp = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/;

@@ -6,7 +6,11 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import ProductItem from '../ProductItem'
 import s from './index.module.css'
-// import SortForm from '../SortForm';
+import SortFormByPriceCategory from '../SortFormByPriceCategory';
+import SortFormCheckBoxCategory from '../SortFormCheckBoxCategory';
+import SortFormSelectCategory from '../SortFormSelectCategory';
+import { getCategories } from '../../async_actions/categories_req';
+
 
 export default function ItemByCategoryContainer() {
   const { categoryId } = useParams();
@@ -16,15 +20,31 @@ export default function ItemByCategoryContainer() {
   }, [])
   const singleCategory_state = useSelector(state => state.singleCategory);
 
+  const categories_state = useSelector(state => state.categories);
+
+  useEffect(() => { dispatch(getCategories) }, []);
+
+  const category = categories_state.find(el => el.id === parseInt(categoryId));
 
   return (
     <div>
-      <h1 id={s.title}>{singleCategory_state?.category?.title}</h1>
-      {/* <SortForm /> */}
+      {category && (
+        <div>
+
+          <h1 id={s.title}>{category.title}</h1>
+        </div>
+      )}
+
+      <div className={s.formsBlock}>
+        <SortFormByPriceCategory />
+        <SortFormCheckBoxCategory />
+        <SortFormSelectCategory />
+      </div>
       <div className={s.productsByCategoryContainer}>
         {
-          singleCategory_state?.data?.filter(el => !el.hide_price).
-          map(el => <ProductItem key={el.id} {...el} />)
+          singleCategory_state
+            .filter(el => !el.hide_price && el.hide_sale)
+            .map(el => <ProductItem key={el.id} {...el} />)
         }
       </div>
     </div>

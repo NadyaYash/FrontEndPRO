@@ -1,8 +1,8 @@
 const LOAD_PRODUCTS = '[PRODUCT_CONTAINER]LOAD_PRODUCTS';
 const LOAD_ALL_SALES_PRODUCTS = '[SALES_PRODUCTS_CONTAINER] LOAD_ALL_SALES_PRODUCTS'
-const FILTER_PRODUCTS_BY_PRICE = '[SORT_FORM] FILTER_PRODUCTS_BY_PRICE';
-const SORT_PRODUCTS = '[SORT_FORM] SORT_PRODUCTS';
-const TOGGLE_DISCOUNT = '[SORT_FORM] TOGGLE_DISCOUNT'
+const FILTER_PRODUCTS_BY_PRICE = '[SORT_FORM_SELECT] FILTER_PRODUCTS_BY_PRICE';
+const SORT_PRODUCTS = '[SORT_FORM_PRICE] SORT_PRODUCTS';
+const TOGGLE_DISCOUNT = '[SORT_FORM_CHECKBOX] TOGGLE_DISCOUNT'
 
 
 export const loadAllProductsAction = payload => ({ type: LOAD_PRODUCTS, payload });
@@ -11,13 +11,15 @@ export const filterProductByPriceAction = payload => ({ type: FILTER_PRODUCTS_BY
 export const sortProductsAction = payload => ({ type: SORT_PRODUCTS, payload });
 export const filterProductsByCheckbox = payload => ({ type: TOGGLE_DISCOUNT, payload });
 
-let default_state = [];
+let default_state = []
 
 
 export const productReducer = (state = [], action) => {
     if (action.type === LOAD_PRODUCTS) {
-        default_state = action.payload;
-        return action.payload
+        default_state = action.payload.map(el => ({...el, hide_price:false}))
+
+        return action.payload.map(el => ({...el, hide_price:false}))
+
     }
     else if (action.type === LOAD_ALL_SALES_PRODUCTS) {
         return action.payload.filter(el => el.discont_price > 0);
@@ -50,26 +52,35 @@ export const productReducer = (state = [], action) => {
             });
         }
         else if (action.payload === 'default') {
-            console.log(default_state)
-            return default_state;
+
+            return [...default_state]
         }
 
         return [...state];
     }
-    else if (action.type === 'TOGGLE_DISCOUNT') {
-        return state.map(el => {
-            if (el.discont_price) {
-                el.hide_sale = false;
-            }
-            else {
-                el.hide_sale = true;
-            }
-            return el
-
-
-
+    else if (action.type === TOGGLE_DISCOUNT) {
+        if (action.payload) {
+            return state.map(el => {
+                if (el.discont_price) {
+                    return {
+                        ...el,
+                        hide_sale: true
+                    };
+                } else {
+                    return {
+                        ...el,
+                        hide_sale: false
+                    };
+                }
+            });
+        } else {
+            return state.map(el => {
+                return {
+                    ...el,
+                    hide_sale: true
+                };
+            });
         }
-        )
 
 
 

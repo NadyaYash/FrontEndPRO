@@ -7,7 +7,7 @@ import { filterProductByPriceAction } from '../../store/reducers/productReducer'
 
 export default function SortFormByPrice() {
   const dispatch = useDispatch();
-  const filterPrice = () => {
+  const filterPriceCategory = () => {
     const min = document.getElementsByName('min')[0].value || 0;
     const max = document.getElementsByName('max')[0].value || Infinity;
     dispatch(filterProductByPriceAction({ min_value: min, max_value: max }));
@@ -19,8 +19,8 @@ export default function SortFormByPrice() {
 
     <form className={s.priceForm}>
       <label htmlFor='price'>Price</label>
-      <input type="text" name="min" placeholder="from" onChange={filterPrice} />
-      <input type="text" name="max" placeholder="to" onChange={filterPrice} />
+      <input type="text" name="min" placeholder="from" onChange={filterPriceCategory} />
+      <input type="text" name="max" placeholder="to" onChange={filterPriceCategory} />
     </form>
 
   );

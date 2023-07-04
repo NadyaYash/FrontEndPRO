@@ -6,8 +6,21 @@ import xxx from '../../dataImages/xSign.png'
 
 
 export default function Cart({ id, title, image, price, discont_price, count }) {
+  let oldPrice;
+  let newPrice;
+  let sale;
 
-  console.log(discont_price);
+  if (price !== undefined) {
+    if (discont_price) {
+      oldPrice = price;
+      newPrice = discont_price;
+      sale = Math.round(100 - (newPrice / oldPrice) * 100);
+    } else {
+      newPrice = price;
+    }
+  }
+
+
 
   const dispatch = useDispatch();
   return (
@@ -23,8 +36,8 @@ export default function Cart({ id, title, image, price, discont_price, count }) 
         </div>
       </div>
       <div className={s.prices}>
-        <p className={s.discontPrice}>{discont_price}<small id={s.currency}>$</small></p>
-        <p id={s.price}>{price}$</p>
+        <p className={s.discontPrice}>{newPrice}<small id={s.currency}>$</small></p>
+        <p id={oldPrice ? s.price : s.priceNa}>{oldPrice}$</p>
         
       </div>
     </div>

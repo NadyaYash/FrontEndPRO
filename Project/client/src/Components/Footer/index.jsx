@@ -14,11 +14,15 @@ export default function Footer() {
         <div className={s.social}>
 
           <figure>
-            <img src={insta} alt='insta' width='44' height='44' />
+            <a href="https://www.instagram.com">
+              <img src={insta} alt="insta" width="44" height="44" />
+            </a>
             <figcaption>Instagram</figcaption>
           </figure>
           <figure>
-            <img src={whatsapp} alt='whatsapp' width='44' height='44' />
+            <a href="https://www.facebook.com">
+              <img src={whatsapp} alt='whatsapp' width='44' height='44' />
+            </a>
             <figcaption>WhatsApp</figcaption>
           </figure>
         </div>
@@ -32,7 +36,14 @@ export default function Footer() {
           <p className={s.day_time}> 24 hours a day</p>
         </div>
       </div>
-      <img className={s.img} src={footer} alt='map' />
+      <div className={s.mapContainer}>
+        <iframe
+          title="Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.4102804109284!2d13.372526676378527!3d52.50791373712464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851cbdd6cfe0f%3A0xb4b0903f299decf1!2zTGlua3N0cmHDn2UgMi84LiBFdGFnZSwgMTA3ODUgQmVybGluLCDQk9C10YDQvNCw0L3QuNGP!5e0!3m2!1sru!2s!4v1688361901864!5m2!1sru!2s" >
+          allowFullScreen
+        </iframe>
+      </div>
+
 
     </footer>
 

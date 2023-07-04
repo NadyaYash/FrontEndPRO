@@ -2,6 +2,8 @@ import React from 'react'
 import gnom from '../../dataImages/gnom.png'
 import s from './index.module.css'
 import { useForm } from 'react-hook-form'
+import { sendDiscountRequest } from '../../async_actions/post_sale_req'
+
 
 
 
@@ -9,12 +11,13 @@ export default function GetDiscount() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         mode: 'onBlur'
     });
+
     const submit = (data) => {
-        console.log(data);
-        reset()
+        sendDiscountRequest(data, reset);
+        reset();
     };
 
-    const phoneRegexp = /^\+49\d{10,11}$/;
+    const phoneRegexp = /^(\+)?(\d{1,3})?\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
 
     const phoneRegister = register('phone', {
         required: '*Phone is a requared',
@@ -32,7 +35,7 @@ export default function GetDiscount() {
                 <form onSubmit={handleSubmit(submit)} className={s.form}>
                     <input type='dropdown' placeholder='+49' name='phoneNumber' {...phoneRegister} />
                     {errors.phone && <p id={s.messageError}>{errors.phone?.message}</p>}
-                    <button id={s.discountBtn}>Get discount</button>
+                    <button className={s.discountBtn}>Get discount</button>
                 </form>
             </div>
 

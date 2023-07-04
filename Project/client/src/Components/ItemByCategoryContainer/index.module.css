@@ -14,3 +14,11 @@
   margin-top: 49px;
   margin-bottom: 8px;
 }
+
+.formsBlock {
+  display: flex;
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 81px;
+}

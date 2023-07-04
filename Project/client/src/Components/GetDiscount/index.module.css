@@ -30,7 +30,7 @@
     padding-bottom: 46px;
 }
 
-#discountBtn {
+.discountBtn {
     width: 473px;
     height: 75.44px;
     border: 2.39494px solid #FFFFFF;
@@ -42,8 +42,17 @@
     line-height: 120%;
     color: #FFFFFF;
     background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
-   
+    cursor: pointer;
+    box-shadow: none;
 }
+
+.discountBtn:hover,
+.discountBtn:focus {
+    background: #01b024; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
 
 
 

@@ -10,12 +10,14 @@ import { singleCategoryReducer } from './reducers/singleCategoryReducer';
 
 
 
+
 const rootReducer = combineReducers({
     products: productReducer,
     cart: cartReducer,
     categories: categoryReducer,
     singleProduct: singleProductReducer,
     singleCategory: singleCategoryReducer
+   
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
