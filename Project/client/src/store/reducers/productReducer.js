@@ -16,9 +16,9 @@ let default_state = []
 
 export const productReducer = (state = [], action) => {
     if (action.type === LOAD_PRODUCTS) {
-        default_state = action.payload.map(el => ({...el, hide_price:false}))
+        default_state = action.payload.map(el => ({ ...el, hide_price: false }))
 
-        return action.payload.map(el => ({...el, hide_price:false}))
+        return action.payload.map(el => ({ ...el, hide_price: false }))
 
     }
     else if (action.type === LOAD_ALL_SALES_PRODUCTS) {

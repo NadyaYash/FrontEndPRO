@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
     categories: categoryReducer,
     singleProduct: singleProductReducer,
     singleCategory: singleCategoryReducer
-   
+
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));

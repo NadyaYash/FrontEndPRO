@@ -9,9 +9,7 @@ export default function NotFoundPage() {
         <img src={image12} alt='404picture' />
       </div>
       <div>
-
       </div>
-
     </div>
   )
 }

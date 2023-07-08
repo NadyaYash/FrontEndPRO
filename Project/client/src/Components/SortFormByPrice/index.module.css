@@ -19,8 +19,7 @@
 
 }
 
-.priceForm input:focus{
+.priceForm input:focus {
     outline: none;
-    
-}
 
+}

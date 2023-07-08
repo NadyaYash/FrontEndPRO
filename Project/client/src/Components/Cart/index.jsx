@@ -21,7 +21,6 @@ export default function Cart({ id, title, image, price, discont_price, count }) 
   }
 
 
-
   const dispatch = useDispatch();
   return (
     <div className={s.cart_item}>
@@ -38,7 +37,7 @@ export default function Cart({ id, title, image, price, discont_price, count }) 
       <div className={s.prices}>
         <p className={s.discontPrice}>{newPrice}<small id={s.currency}>$</small></p>
         <p id={oldPrice ? s.price : s.priceNa}>{oldPrice}$</p>
-        
+
       </div>
     </div>
 

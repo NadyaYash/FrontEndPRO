@@ -19,8 +19,8 @@ export default function ProductsContainer() {
   return (
     <div className={s.products_container}>
       {products_state
-                .filter(el => !el.hide_price && el.hide_sale)
-                .map(el => <ProductItem key={el.id} {...el} />)}
+        .filter(el => !el.hide_price && el.hide_sale)
+        .map(el => <ProductItem key={el.id} {...el} />)}
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { sendOrderRequest } from '../../async_actions/post_order_req'
 
 
-export default function OrderDetails({fullPrice}) {
+export default function OrderDetails({ fullPrice }) {
   const cart_state = useSelector(state => state.cart)
   const total = (cart_state.reduce((acc, { fullPrice, count }) => acc + fullPrice * count, 0)).toFixed(2)
   const { register, handleSubmit, formState: { errors }, reset } = useForm({

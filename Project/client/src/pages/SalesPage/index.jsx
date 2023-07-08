@@ -12,7 +12,7 @@ export default function SalesPage() {
       <h1>Products with sale</h1>
       <div className={s.formsBlock}>
         <SortFormByPrice />
-                <SortFormSelect />
+        <SortFormSelect />
       </div>
       <SalesContainer />
     </div>

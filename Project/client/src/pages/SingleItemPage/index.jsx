@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { addToCartAction } from '../../store/reducers/cartReducer';
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom';
@@ -10,42 +10,42 @@ import s from './index.module.css'
 
 export default function SingleItemPage() {
 
-  const addToCart = () => dispatch(addToCartAction({id: +id, title, image, price, description, discont_price}))
+  const addToCart = () => dispatch(addToCartAction({ id: +id, title, image, price, description, discont_price }))
   const dispatch = useDispatch();
-  const {productId} = useParams();
-  useEffect(()=>{
+  const { productId } = useParams();
+  useEffect(() => {
     dispatch(getSingleProduct(productId))
   }, [])
   const singleProduct_state = useSelector(state => state.singleProduct);
-  const {id, title, image, price, description, discont_price} = singleProduct_state;
-  const sale = Math.round((price - discont_price)/ price * 100);
+  const { id, title, image, price, description, discont_price } = singleProduct_state;
+  const sale = Math.round((price - discont_price) / price * 100);
 
-  
+
 
   return (
-    <div className={s.general}>  
-     <p className={s.title}>{title}</p>
-     <div className={s.singleItem}>
-      <img src={`http://localhost:3333/${image}`} alt={title}/>
-      <div>
-        <div className={s.prices}>
-          <div>
-            <p className={s.discont_price}>{discont_price}<small className={s.currency}>$</small></p>
-            
-        </div>
-            <p id={s.price_style}>{price}$</p>
-            <p id={s.sale_style}>-{sale}%</p>       
-      </div>
-            <div id={s.toCart} onClick={addToCart}>To cart</div>
-            <p id={s.description}>Description</p>
-            <p id={s.descriptionFull}>{description}</p>
+    <div className={s.general}>
+      <p className={s.title}>{title}</p>
+      <div className={s.singleItem}>
+        <img src={`http://localhost:3333/${image}`} alt={title} />
+        <div>
+          <div className={s.prices}>
+            <div>
+              <p className={s.discont_price}>{discont_price}<small className={s.currency}>$</small></p>
+
             </div>
-      
+            <p id={s.price_style}>{price}$</p>
+            <p id={s.sale_style}>-{sale}%</p>
+          </div>
+          <div id={s.toCart} onClick={addToCart}>To cart</div>
+          <p id={s.description}>Description</p>
+          <p id={s.descriptionFull}>{description}</p>
+        </div>
+
       </div>
-     
-     
-      
-      
+
+
+
+
     </div>
   )
 }

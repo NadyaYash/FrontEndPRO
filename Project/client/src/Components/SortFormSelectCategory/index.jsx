@@ -25,10 +25,5 @@ export default function SortFormSelectCategory() {
             </select>
         </div>
 
-
-
-
-
-
     );
 };

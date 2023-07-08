@@ -48,7 +48,7 @@
 
 .discountBtn:hover,
 .discountBtn:focus {
-    background: #01b024; 
+    background: #01b024;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
 }
@@ -78,10 +78,10 @@
     line-height: 120%;
     color: #6C6C6C;
     padding-left: 50px;
-    
+
 }
 
-.messageError{
+.messageError {
     color: #6C6C6C;
     font-family: 'Montserrat';
     font-style: normal;

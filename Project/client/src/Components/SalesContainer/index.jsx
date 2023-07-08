@@ -18,7 +18,7 @@ export default function SalesContainer() {
         <div className={s.products_container} >
             {
                 products_state.filter(el => !el.hide_price)
-                .map(el => <ProductItem key={el.id} {...el} />)
+                    .map(el => <ProductItem key={el.id} {...el} />)
             }
         </div>
     )

@@ -20,9 +20,6 @@ const checkProductInCart = (state, payload) => {
 }
 
 
-
-
-
 export const cartReducer = (state = [], action) => {
     if (action.type === ADD_TO_CART) {
         return checkProductInCart(state, action.payload)

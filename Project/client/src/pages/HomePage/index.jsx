@@ -12,8 +12,8 @@ export default function HomePage() {
     <div className={s.home}>
       <SaleBlock />
       <div id={s.catalog}>
-      <h1>Catalog</h1>
-      <Link to='/categories' className={s.categoriesBtn}>All categories</Link>
+        <h1>Catalog</h1>
+        <Link to='/categories' className={s.categoriesBtn}>All categories</Link>
       </div>
       <FourCategories />
       <GetDiscount />
